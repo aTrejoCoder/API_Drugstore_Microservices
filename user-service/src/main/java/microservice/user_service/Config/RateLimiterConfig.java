@@ -13,8 +13,8 @@ public class RateLimiterConfig {
 
     @Bean
     public Bucket bucket() {
-        long capacity = 5;
-        Refill refill = Refill.intervally(2, Duration.ofMinutes(1));
+        long capacity = 20;
+        Refill refill = Refill.intervally(10, Duration.ofMinutes(1));
         Bandwidth limit = Bandwidth.classic(capacity, refill);
         return Bucket.builder()
                 .addLimit(limit)
