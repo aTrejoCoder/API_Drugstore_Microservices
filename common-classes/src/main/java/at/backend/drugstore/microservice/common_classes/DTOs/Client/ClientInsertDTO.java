@@ -30,3 +30,4 @@ public class ClientInsertDTO {
     @JsonProperty("phone")
     private String phone;
 }
+
